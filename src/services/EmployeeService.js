@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const SPRING_BASE_URL = "http://localhost:9080/empmgn/employees";
+const SPRING_BASE_URL = "http://localhost:8080/empmgn/employees";
 
 class EmployeeService {
   saveEmployee(employee) {
