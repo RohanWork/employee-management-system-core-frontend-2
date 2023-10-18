@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Employee Management System (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend repository for the Employee Management System, a full-stack web application designed for managing employee data. The frontend is built with React, and its user interface is styled using Tailwind CSS. It works in conjunction with the Spring Boot backend.
 
-## Available Scripts
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+The Employee Management System is a comprehensive web application that streamlines the process of managing employee information. This repository houses the frontend code responsible for delivering an intuitive user interface for interacting with the system.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend Framework**: [React](https://reactjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Backend Repository**: [Employee Management System Backend](https://github.com/RohanWork/employee-management-system-core-backend-1)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+The frontend of the Employee Management System offers a range of features, including:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **CRUD Operations**: Create, Read, Update, and Delete employee data.
+- **User-Friendly Interface**: An easy-to-navigate and responsive design.
+- **Seamless Integration**: Connects seamlessly with the Spring Boot backend.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To set up the frontend on your local machine, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the Repository**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/RohanWork/employee-management-system-core-frontend-2.git
+   ```
 
-### `npm run eject`
+2. **Navigate to the Project Directory**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   cd employee-management-system-core-frontend-2
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Install Dependencies**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Start the Development Server**:
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Access the Application**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Open your web browser and visit [http://localhost:3000](http://localhost:3000) to begin using the application.
 
-### Code Splitting
+## Important Note
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For the complete and functional operation of the Employee Management System frontend, it is essential to have the corresponding backend system up and running. The frontend interacts with the backend to provide a seamless user experience, allowing users to perform CRUD operations and access various features.
 
-### Analyzing the Bundle Size
+Please ensure that you have the [Employee Management System Backend](https://github.com/RohanWork/employee-management-system-core-backend-1) set up and running on your system before using the frontend. The backend provides the necessary APIs and services to support the frontend's functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you haven't already, follow the backend's setup and installation instructions in its repository to establish the backend component of the system. Once the backend is operational, you can proceed to run and interact with the frontend as described in the [Getting Started](#getting-started) section.
 
-### Making a Progressive Web App
+Your system should have both the frontend and backend components working together to enjoy the full capabilities of the Employee Management System.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Usage
 
-### Advanced Configuration
+The frontend component of the Employee Management System serves as the user interface for managing employee data. It offers a straightforward means of interacting with the backend and executing CRUD operations seamlessly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions to this project are encouraged and appreciated! If you would like to contribute to the development and improvement of this frontend application, please adhere to the following steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Fork the Repository**.
+2. **Create a New Branch** for your feature or bug fix: `git checkout -b feature-name`.
+3. **Make Changes** and Commit Them: `git commit -m 'Add feature'`.
+4. **Push Changes** to your forked repository: `git push origin feature-name`.
+5. **Open a Pull Request** to the original repository.
