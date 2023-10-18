@@ -4,7 +4,6 @@ import EmployeeService from "../services/EmployeeService";
 
 const AddEmployee = () => {
   const [employee, setEmployee] = useState({
-    id: "",
     firstName: "",
     lastName: "",
     emailId: "",
@@ -14,6 +13,12 @@ const AddEmployee = () => {
     location: "",
     empId:"",
   });
+
+  // const redirect = () => {
+  //   const destination = 'src/components/EmployeeList.js';
+  //   const destinationURL = 'F:/built/employee-management-system-core-frontend-2/src/components/EmployeeList.js';
+  //   window.location.href = destination;
+  // }
 
   const navigate = useNavigate();
 
@@ -37,16 +42,15 @@ const AddEmployee = () => {
 
   const reset = (e) => {
     e.preventDefault();
-    let fill = "";
     setEmployee({
-      empId: fill,
-      firstName: fill,
-      lastName: fill,
-      emailId: fill,
-      password: fill,
-      department: fill,
-      salary: fill,
-      location: fill,
+      empId: "",
+      firstName: "",
+      lastName: "",
+      emailId: "",
+      password: "",
+      department: "",
+      salary: "",
+      location: "",
     });
   };
 
@@ -175,7 +179,8 @@ const AddEmployee = () => {
           </button>
           <button
             onClick={() => navigate("/employeeList")}
-            className="rounded text-white font-semibold bg-red-600 hover:bg-red-500 py-2 px-6">
+            // onClick={redirect}
+           className="rounded text-white font-semibold bg-red-600 hover:bg-red-500 py-2 px-6">
             Cancel
           </button>
         </div>
