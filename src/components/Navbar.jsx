@@ -23,10 +23,10 @@ const Navbar = () => {
     <div className="flex items-center">
       <p className="text-white font-medium ">
         <p className="head">Employee Management System</p>
-          <br></br>
-          <p className="disp">Employee CRUD Operations: Provide functionality to create, read, update, and delete employee records. 
-          Users should be able to add new employees, view employee details, update employee information, and remove employees from the system.
-          </p>
+      <br></br>
+      <p className="disp">Employee CRUD Operations: Provide functionality to create, read, update, and delete employee records. 
+      Users should be able to add new employees, view employee details, update employee information, and remove employees from the system.
+      </p>
       </p>
     </div>
   </div>
