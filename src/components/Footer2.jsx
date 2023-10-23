@@ -2,8 +2,8 @@ import { Typography } from "@material-tailwind/react";
 import empImage from './1emp.png';
 export function Footer2() {
   return (
-    <footer className="w-full p-8 bg-gray-800">
-      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-gray-800 text-center md:justify-between">
+    <footer className="w-full p-8 Nav-color">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
         <img src={empImage} alt="logo-emp" className="w-13 h-13 rounded-full" />
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
