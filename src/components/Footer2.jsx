@@ -50,7 +50,7 @@ export function Footer2() {
       </div>
       <hr className="my-8 border-blue-gray-50" />
       <Typography color="white" className="text-center font-normal">
-        &copy; 2023 Employee Manage (Internal)
+        &copy; 2023 Employee CRM Tool (Internal)
       </Typography>
     </footer>
   );
