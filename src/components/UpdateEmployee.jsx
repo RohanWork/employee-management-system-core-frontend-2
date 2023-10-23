@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import EmployeeService from "../services/EmployeeService";
+import EmployeeService, { editEmployee, getEmployeeById } from "../services/EmployeeService";
 
 const UpdateEmployee = () => {
   const { id } = useParams();
@@ -22,9 +23,12 @@ const UpdateEmployee = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
-        const response = await EmployeeService.getEmployeeById(employee.id);
+      //calling the get map (getEmployeeById(empid) method) from EmployeeService file
+        console.log("calling the get map (getEmployeeById(empid) method) from EmployeeService file");
+        const response = await getEmployeeById(employee.id);
         setEmployee(response.data);
       } catch (error) {
         console.log(error);
@@ -36,8 +40,9 @@ const UpdateEmployee = () => {
   const updateEmployee = (e) => {
     e.preventDefault();
     console.log(employee);
-    EmployeeService.updateEmployee(employee, id)
-      .then((response) => {
+  //calling the get map (getEmployeeById(empid) method) from EmployeeService file
+    console.log("calling the put map (editEmployee(employee, id) method) from EmployeeService file");
+    editEmployee(employee, id).then((response) => {
         alert("Records updated successfully for ID " + id);
         navigate("/employeeList");
       })
@@ -47,6 +52,9 @@ const UpdateEmployee = () => {
   };
 
   return (
+    <>
+    <br/>
+    <br/>
     <div className="flex max-w-2xl mx-auto shadow border-b">
       <div className="px-8 py-8">
         <div className="font-bold text-2xl">
@@ -156,6 +164,7 @@ const UpdateEmployee = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

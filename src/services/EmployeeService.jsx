@@ -68,36 +68,104 @@
 
 
 
+// import axios from 'axios';
+
+// const SPRING_BASE_URL = 'http://localhost:8080/empmgn/employees';
+
+// const saveEmployee = (employee) => {
+//   return axios.post(SPRING_BASE_URL, employee);
+// };
+
+// const getEmployees = () => {
+//   return axios.get(SPRING_BASE_URL);
+// };
+
+// const deleteEmployee = (id) => {
+//   return axios.delete(SPRING_BASE_URL+"/"+id);
+// };
+
+// const getEmployeeById = (id) => {
+//   return axios.get(SPRING_BASE_URL+"/"+id);
+// };
+
+// const updateEmployee = (employee, id) => {
+//   return axios.put(SPRING_BASE_URL+"/"+id, employee);
+// };
+
+// const employeeService = {
+//   saveEmployee,
+//   getEmployees,
+//   deleteEmployee,
+//   getEmployeeById,
+//   updateEmployee,
+// };
+
+// export default employeeService;
+
+
+
+
+
 import axios from 'axios';
 
 const SPRING_BASE_URL = 'http://localhost:8080/empmgn/employees';
 
-const saveEmployee = (employee) => {
+export function createEmployee(employee) {
   return axios.post(SPRING_BASE_URL, employee);
-};
+}
 
-const getEmployees = () => {
+export function getEmployees() {
   return axios.get(SPRING_BASE_URL);
-};
+}
 
-const deleteEmployee = (id) => {
+export function deleteEmployee(id) {
   return axios.delete(SPRING_BASE_URL+"/"+id);
-};
+}
 
-const getEmployeeById = (id) => {
+export function getEmployeeById(id) {
   return axios.get(SPRING_BASE_URL+"/"+id);
-};
+}
 
-const updateEmployee = (employee, id) => {
+export function editEmployee(employee, id) {
   return axios.put(SPRING_BASE_URL+"/"+id, employee);
-};
+}
 
-const employeeService = {
-  saveEmployee,
-  getEmployees,
-  deleteEmployee,
-  getEmployeeById,
-  updateEmployee,
-};
 
-export default employeeService;
+
+
+
+// import axios from 'axios';
+
+// const SPRING_BASE_URL = 'http://localhost:8080/empmgn/employees';
+
+// export default function EmployeeService() {
+
+//   const saveEmployee = (employee) => {
+//     return axios.post(SPRING_BASE_URL, employee);
+//   };
+
+//   const getEmployees = () => {
+//     return axios.get(SPRING_BASE_URL);
+//   };
+
+//   const deleteEmployee = (id) => {
+//     return axios.delete(SPRING_BASE_URL + "/" + id);
+//   };
+
+//   const getEmployeeById = (id) => {
+//     return axios.get(SPRING_BASE_URL + "/" + id);
+//   };
+
+//   const updateEmployee = (employee, id) => {
+//     return axios.put(SPRING_BASE_URL + "/" + id, employee);
+//   };
+
+// return(
+//   saveEmployee,
+//   getEmployees,
+//   deleteEmployee,
+//   getEmployeeById,
+//   updateEmployee
+// )
+
+// }

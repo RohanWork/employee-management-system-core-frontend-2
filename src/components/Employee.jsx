@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Employee = ({ employee, deleteEmployee }) => {
+const Employee = ({ employee, deleteEmpFun }) => {
   const navigate = useNavigate();
   const editEmployee = (e, id) => {
     e.preventDefault();
@@ -38,7 +38,7 @@ const Employee = ({ employee, deleteEmployee }) => {
           Update
         </button>
         <button
-          onClick={(e) => deleteEmployee(e, employee.id)}
+          onClick={(e) => deleteEmpFun(e, employee.id)}
           className="text-red-600 font-bold hover:text-red-800 hover:cursor-pointer">
           Delete
         </button>
