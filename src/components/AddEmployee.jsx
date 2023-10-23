@@ -1,8 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import EmployeeService from "../services/EmployeeService";
+import EmployeeService, { createEmployee } from "../services/EmployeeService";
+import Navbar2 from "./Navbar2";
+import Navbar from "./Navbar";
 
 const AddEmployee = () => {
+  window.scrollTo(0, 0);
+
   const [employee, setEmployee] = useState({
     firstName: "",
     lastName: "",
@@ -29,14 +34,14 @@ const AddEmployee = () => {
 
   const saveEmployee = (e) => {
     e.preventDefault();
-    EmployeeService.saveEmployee(employee)
-      .then((response) => {
+  //calling the post method (createEmployees() method) from EmployeeService file
+    console.log("calling the post method (createEmployees() method) from EmployeeService file");
+    createEmployee(employee).then((response) => {
         console.log(response);
         alert("Employee registered successfully with id "+ employee.empId);
         navigate("/employeeList");
-      })
-      .catch((error) => {
-        console.log(error);
+      }).catch((error) => {
+          console.log(error);
       });
   };
 
@@ -55,6 +60,11 @@ const AddEmployee = () => {
   };
 
   return (
+
+    <>
+    {/* <Navbar/> */}
+    <br/>
+    <br/>
     <div className="flex max-w-2xl mx-auto shadow border-b">
       <div className="px-8 py-8">
         <div className="font-bold text-2xl">
@@ -186,6 +196,7 @@ const AddEmployee = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import EmployeeService from "../services/EmployeeService";
+import EmployeeService, { getEmployees, deleteEmployee } from "../services/EmployeeService";
 import Employee from "./Employee";
+import Navbar from "./Navbar";
 
 const EmployeeList = () => {
   const navigate = useNavigate();
@@ -10,10 +12,13 @@ const EmployeeList = () => {
   const [employees, setEmployees] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(50, 520);
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await EmployeeService.getEmployees();
+      //calling the get map (getEmployees() method) from EmployeeService file
+        console.log("calling the get map (getEmployees() method) from EmployeeService file");
+        const response = await getEmployees();
         setEmployees(response.data);
       } catch (error) {
         console.log(error);
@@ -23,9 +28,11 @@ const EmployeeList = () => {
     fetchData();
   }, []);
 
-  const deleteEmployee = (e, id) => {
+  const deleteEmpFun = (e, id) => {
       e.preventDefault();
-      EmployeeService.deleteEmployee(id).then((res) => {
+    //calling the delete map (deleteEmployees() method) from EmployeeService file
+      console.log("calling the delete map (deleteEmployees() method) from EmployeeService file");
+      deleteEmployee(id).then((res) => {
           if(employees) {
               setEmployees((prevElement) => {
                   return prevElement.filter((employee) => employee.id !== id);
@@ -36,7 +43,10 @@ const EmployeeList = () => {
   }
 
   return (
-    // flex justify-center
+    <>
+    <Navbar/>
+
+    {/* flex justify-center */}
     <div className="container my-8 App-Item">
       <div className="container mt-10 h-full">
         <button
@@ -82,7 +92,7 @@ const EmployeeList = () => {
                   {employees.map((employee) => (
                       <Employee 
                       employee={employee}
-                      deleteEmployee={deleteEmployee} 
+                      deleteEmpFun={deleteEmpFun} 
                       key={employee.id}></Employee>
                   ))}
               </tbody>
@@ -91,6 +101,7 @@ const EmployeeList = () => {
       {/* </div> */}
       {/* </div> */}
     </div>
+    </>
   );
 };
 
