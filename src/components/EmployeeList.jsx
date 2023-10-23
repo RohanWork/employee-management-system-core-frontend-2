@@ -12,7 +12,7 @@ const EmployeeList = () => {
   const [employees, setEmployees] = useState(null);
 
   useEffect(() => {
-    window.scrollTo(50, 520);
+    window.scrollTo(50, 120);
     const fetchData = async () => {
       setLoading(true);
       try {

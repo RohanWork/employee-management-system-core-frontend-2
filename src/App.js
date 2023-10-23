@@ -11,7 +11,7 @@ import Login from "./components/Login";
 import { Footer2 } from "./components/Footer2";
 import Navbar from "./components/Navbar";
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar2 />
@@ -38,5 +38,3 @@ function App() {
     </>
   );
 }
-
-export default App;
